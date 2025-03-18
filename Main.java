@@ -5,8 +5,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter the amount of seconds you want to time: ");
-        int seconds = scanner.nextInt();
+        int seconds;
+
+        do {
+            System.out.print("Enter the amount of seconds you want to time: ");
+            seconds = scanner.nextInt();
+        } while (seconds <= 0);
 
         for (int i = seconds; i >= 1; i--) {
             System.out.println(i);
@@ -20,7 +24,7 @@ public class Main {
             }
         }
 
-        System.out.println("TIME'S UP!");
+        System.out.println("TIME IS UP!");
 
         scanner.close();
     }
